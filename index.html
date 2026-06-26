@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danzx Shop — Panel Pterodactyl Private</title>
+<meta name="description" content="Sewa panel Pterodactyl private, legal, dan murah. Order cepat, bayar via QRIS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header>
+  <div class="brand">
+    <div class="logo">D</div>
+    <div class="name">Danzx Shop</div>
+  </div>
+  <div class="cs-menu-wrap">
+    <button class="cs-pill" id="csBtn" onclick="toggleCsMenu()">💬 Chat CS</button>
+    <div class="cs-menu" id="csMenu">
+      <a id="waLink" target="_blank">🟢 WhatsApp</a>
+      <a id="tgLink" target="_blank">🔵 Telegram</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="hero-note">Sewa <b>Panel Pterodactyl Private</b> — legal, garansi seumur durasi aktif, pembayaran via QRIS. Pilih paket di bawah lalu klik <b>Order</b>.</p>
+
+  <span class="sec-label">// Daftar Paket</span>
+  <div id="pkg-list"></div>
+
+  <div class="cs-card">
+    <div>
+      <h4>Ada pertanyaan? 💬</h4>
+      <p>Tim CS kami siap bantu 24 jam via WhatsApp / Telegram.</p>
+    </div>
+    <button class="cs-btn" onclick="toggleCsMenu()">Chat CS →</button>
+  </div>
+
+  <span class="sec-label">// Channel Kami</span>
+  <div class="channels">
+    <a class="ch-link" href="https://whatsapp.com/channel/0029VbCTqG7Fsn0fJzxg1B1H" target="_blank">📢 Channel Utama <span class="arrow">→</span></a>
+    <a class="ch-link" href="https://whatsapp.com/channel/0029VbCCZmt4SpkIviNn811E" target="_blank">ℹ️ Informasi <span class="arrow">→</span></a>
+    <a class="ch-link" href="https://whatsapp.com/channel/0029VbBSKdh8aKvShLrENh11" target="_blank">⭐ Testimoni <span class="arrow">→</span></a>
+  </div>
+
+  <div class="footer-note">© 2026 Danzx Shop · Transaksi diproses manual oleh admin</div>
+</div>
+
+<!-- Checkout / QRIS modal -->
+<div class="overlay" id="checkoutOverlay">
+  <div class="modal">
+    <button class="close" id="modalClose">✕</button>
+    <h3>Checkout Pesanan</h3>
+    <p class="sub">Scan QRIS di bawah, lalu konfirmasi ke admin.</p>
+    <div class="order-summary">
+      <span class="pkgname" id="sumName">-</span>
+      <span class="pkgprice" id="sumPrice">-</span>
+    </div>
+    <div class="qris-box">
+      <img id="qrisImg" alt="QRIS Danzx Shop">
+      <div class="hint">Pembayaran QRIS · pastikan nominal sesuai paket</div>
+    </div>
+    <div class="confirm-row">
+      <a class="wa-btn" id="waConfirm" target="_blank">🟢 Konfirmasi via WhatsApp</a>
+      <a class="tg-btn" id="tgConfirm" target="_blank">🔵 Konfirmasi via Telegram</a>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/script.js"></script>
+</body>
+</html>
