@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Danzx Official</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #0b0f19;
+            background-image: radial-gradient(circle at top right, rgba(212, 163, 89, 0.08), transparent 40%), radial-gradient(circle at bottom left, rgba(212, 163, 89, 0.05), transparent 50%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-gray-200 antialiased selection:bg-[#d4a359] selection:text-black">
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash-screen" class="fixed inset-0 bg-[#070a12] z-50 flex flex-col items-center justify-center p-6 transition-opacity duration-500">
+        <div class="text-center">
+            <h1 class="text-xl md:text-2xl font-medium text-gray-400 tracking-widest uppercase mb-1">Welcome To All Payment</h1>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#f3d299] via-[#d4a359] to-[#aa7c34] tracking-tight mb-8">DANZX OFFICIAL</h2>
+            
+            <!-- Logo Utama -->
+            <div class="w-36 h-36 mx-auto rounded-full bg-gradient-to-b from-[#1c2333] to-[#0d111a] flex items-center justify-center shadow-2xl shadow-[#d4a359]/10 mb-8 border-2 border-[#d4a359]/30 p-1 relative overflow-hidden">
+                <img src="https://img2.pixhost.to/images/8925/743609782_ochobot.jpg" alt="Danzx Logo" class="w-full h-full object-cover rounded-full">
+                <div class="absolute inset-0 rounded-full bg-[#d4a359]/5 blur-md"></div>
+            </div>
+            
+            <p class="text-sm text-gray-400 font-medium tracking-wide">FOCUS • DISCIPLINE • SUCCESS</p>
+            <div class="mt-8 flex justify-center gap-1 text-xs text-[#d4a359]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="hidden opacity-0 transition-opacity duration-500 w-full max-w-md mx-auto px-4 py-6 flex-1 flex flex-col justify-between">
+        
+        <!-- Header -->
+        <header class="flex items-center justify-between mb-6 bg-[#121824]/60 p-3 rounded-2xl border border-gray-800/60 backdrop-blur-md">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-[#182030] flex items-center justify-center p-0.5 border border-[#d4a359]/30 shadow-md overflow-hidden">
+                    <img src="https://img2.pixhost.to/images/8925/743609782_ochobot.jpg" alt="Danzx Logo" class="w-full h-full object-cover rounded-full">
+                </div>
+                <div>
+                    <h1 class="font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400 text-sm tracking-wide">DANZX OFFICIAL</h1>
+                    <p class="text-[10px] text-[#d4a359] font-bold tracking-widest uppercase">All Payment</p>
+                </div>
+            </div>
+            <button onclick="openModal('contact-modal')" class="bg-gradient-to-r from-[#e7c281] to-[#d4a359] hover:from-[#d4a359] hover:to-[#aa7c34] text-gray-950 text-xs font-extrabold px-4 py-2.5 rounded-xl shadow-lg shadow-[#d4a359]/10 transition-all cursor-pointer transform active:scale-95">
+                Contact Owner
+            </button>
+        </header>
+
+        <!-- Banner Card Premium -->
+        <div class="bg-gradient-to-b from-[#161f30] to-[#0e1420] text-gray-200 p-6 rounded-2xl border border-[#d4a359]/30 shadow-2xl relative overflow-hidden mb-6">
+            <div class="relative z-10">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-[10px] bg-[#d4a359]/10 text-[#e7c281] px-2 py-0.5 rounded-md font-bold tracking-wider border border-[#d4a359]/20">OFFICIAL PAYMENT</span>
+                </div>
+                <h2 class="text-xl font-extrabold tracking-tight text-white mb-1">Sistem Informasi Pembayaran</h2>
+                <p class="text-xs text-gray-400 mb-5 font-medium">Silakan transfer sesuai detail invoice Anda.</p>
+                
+                <div class="bg-[#0b0f17] border border-gray-800 p-3 rounded-xl flex items-center justify-between">
+                    <span class="text-xs text-gray-400 font-semibold"><i class="fa-solid fa-shield-halved text-[#d4a359] mr-1.5"></i> Status Sistem:</span>
+                    <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Siap Menerima Pembayaran
+                    </span>
+                </div>
+            </div>
+            <!-- Background Anchor Watermark Overlay -->
+            <div class="absolute -right-6 -bottom-6 w-32 h-32 opacity-5 pointer-events-none overflow-hidden rounded-full">
+                <img src="https://img2.pixhost.to/images/8925/743609782_ochobot.jpg" alt="watermark">
+            </div>
+        </div>
+
+        <!-- Payment Selection -->
+        <div class="bg-[#121824] border border-gray-800 p-5 rounded-2xl shadow-sm mb-6 flex-1">
+            <h3 class="text-xs font-bold text-gray-400 mb-4 text-center tracking-widest uppercase">Silahkan Pilih Metode Pembayaran</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <!-- DANA -->
+                <button onclick="openPayment('DANA', '085129511955', 'Muhammad Danang Fahri')" class="p-4 bg-[#161d2b] hover:bg-[#1c2638] border border-gray-800 hover:border-[#d4a359]/40 rounded-xl flex flex-col items-center justify-center gap-2.5 transition-all cursor-pointer group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="Dana" class="h-6 object-contain group-hover:scale-105 transition-transform brightness-110">
+                    <span class="text-xs font-bold text-gray-300">Dana</span>
+                </button>
+
+                <!-- GOPAY -->
+                <button onclick="openPayment('GOPAY', '085129511955', 'Muhammad Danang Fahri')" class="p-4 bg-[#161d2b] hover:bg-[#1c2638] border border-gray-800 hover:border-[#d4a359]/40 rounded-xl flex flex-col items-center justify-center gap-2.5 transition-all cursor-pointer group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="Gopay" class="h-6 object-contain group-hover:scale-105 transition-transform">
+                    <span class="text-xs font-bold text-gray-300">Gopay</span>
+                </button>
+
+                <!-- SEABANK -->
+                <button onclick="openPayment('SEABANK', '901961142527', 'Muhammad Danang Fahri')" class="p-4 bg-[#161d2b] hover:bg-[#1c2638] border border-gray-800 hover:border-[#d4a359]/40 rounded-xl flex flex-col items-center justify-center gap-2.5 transition-all cursor-pointer group">
+                    <img src="https://img2.pixhost.to/images/8925/743611283_ochobot.jpg" alt="SeaBank" class="h-7 object-contain group-hover:scale-105 transition-transform rounded-sm">
+                    <span class="text-xs font-bold text-gray-300">SeaBank</span>
+                </button>
+
+                <!-- QRIS -->
+                <button onclick="openQris()" class="p-4 bg-[#161d2b] hover:bg-[#1c2638] border border-gray-800 hover:border-[#d4a359]/40 rounded-xl flex flex-col items-center justify-center gap-2.5 transition-all cursor-pointer group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="Qris" class="h-6 object-contain group-hover:scale-105 transition-transform invert brightness-200">
+                    <span class="text-xs font-bold text-gray-300">Qris All Payment</span>
+                </button>
+            </div>
+
+            <!-- Core Values Badge -->
+            <div class="grid grid-cols-2 gap-2 mt-6 pt-5 border-t border-gray-800/80 text-[10px] text-gray-400 font-semibold">
+                <div class="flex items-center gap-2 bg-[#0e1420] p-2 rounded-lg border border-gray-900"><i class="fa-solid fa-circle-check text-[#d4a359]"></i> 100% AMANAH</div>
+                <div class="flex items-center gap-2 bg-[#0e1420] p-2 rounded-lg border border-gray-900"><i class="fa-solid fa-bolt text-[#d4a359]"></i> FAST RESPONSE</div>
+                <div class="flex items-center gap-2 bg-[#0e1420] p-2 rounded-lg border border-gray-900"><i class="fa-solid fa-crown text-[#d4a359]"></i> PREMIUM QUALITY</div>
+                <div class="flex items-center gap-2 bg-[#0e1420] p-2 rounded-lg border border-gray-900"><i class="fa-solid fa-thumbs-up text-[#d4a359]"></i> GARANSI FULL</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-[10px] text-gray-500 font-medium py-2 tracking-wider">
+            POWERED BY OWNER <span class="text-[#d4a359] font-bold">DANZX OFFICIAL</span>
+        </footer>
+    </div>
+
+    <!-- MODAL CONTACT OWNER (BANYAK LINK CHANNEL) -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-[#121824] border border-gray-800 w-full max-w-sm rounded-2xl p-5 shadow-2xl scale-95 transition-transform duration-300 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-300 cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h4 class="text-center font-bold text-white tracking-wide mb-5 mt-2">Contact Owner & Channel</h4>
+            
+            <div class="flex flex-col gap-2.5">
+                <!-- Kontak Utama -->
+                <div class="text-[10px] text-gray-500 font-bold tracking-wider uppercase mb-0.5">Kontak Pribadi</div>
+                <a href="https://wa.me/6283849480456" target="_blank" class="w-full py-2.5 px-3.5 bg-[#16222f] hover:bg-[#1d2d3f] text-gray-200 border border-emerald-500/20 rounded-xl text-xs font-semibold flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-2.5"><i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> WhatsApp Owner</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-[#d4a359]"></i>
+                </a>
+                <a href="https://t.me/Danzx_JBR" target="_blank" class="w-full py-2.5 px-3.5 bg-[#16222f] hover:bg-[#1d2d3f] text-gray-200 border border-blue-500/20 rounded-xl text-xs font-semibold flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-2.5"><i class="fa-brands fa-telegram text-blue-400 text-sm"></i> Telegram Owner</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-[#d4a359]"></i>
+                </a>
+
+                <!-- Saluran / Channels -->
+                <div class="text-[10px] text-gray-500 font-bold tracking-wider uppercase mt-2 mb-0.5">Saluran WhatsApp</div>
+                <a href="https://whatsapp.com/channel/0029VbCTqG7Fsn0fJzxg1B1H" target="_blank" class="w-full py-2.5 px-3.5 bg-[#1a1f2c] hover:bg-[#222a3a] text-gray-200 border border-gray-800 rounded-xl text-xs font-semibold flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-layer-group text-[#d4a359] text-xs"></i> Saluran Utama</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCCZmt4SpkIviNn811E" target="_blank" class="w-full py-2.5 px-3.5 bg-[#1a1f2c] hover:bg-[#222a3a] text-gray-200 border border-gray-800 rounded-xl text-xs font-semibold flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-circle-info text-[#d4a359] text-xs"></i> Saluran Informasi</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbBSKdh8aKvShLrENh11" target="_blank" class="w-full py-2.5 px-3.5 bg-[#1a1f2c] hover:bg-[#222a3a] text-gray-200 border border-gray-800 rounded-xl text-xs font-semibold flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-star text-[#d4a359] text-xs"></i> Saluran Testimoni</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
+                </a>
+            </div>
+            <p class="text-center text-[9px] text-gray-500 mt-6 font-bold tracking-widest uppercase">FOCUS • DISCIPLINE • SUCCESS</p>
+        </div>
+    </div>
+
+    <!-- MODAL DETAIL PAYMENT (DANA, GOPAY, SEABANK) -->
+    <div id="payment-modal" class="fixed inset-0 bg-black/70 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-[#121824] border border-gray-800 w-full max-w-xs rounded-2xl p-5 shadow-2xl scale-95 transition-transform duration-300 relative">
+            <button onclick="closeModal('payment-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-300 cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h4 id="pay-title" class="text-center font-bold text-white mb-4 mt-2">Detail Pembayaran</h4>
+            
+            <div class="bg-[#0b0f17] p-4 rounded-xl text-center border border-gray-800/80 mb-4">
+                <p class="text-[9px] uppercase tracking-widest text-[#d4a359] font-extrabold mb-1.5">Nama Rekening</p>
+                <p id="pay-name" class="font-bold text-gray-200 text-sm mb-4">-</p>
+                
+                <p class="text-[9px] uppercase tracking-widest text-[#d4a359] font-extrabold mb-1.5">Nomor Rekening / ID</p>
+                <p id="pay-number" class="font-mono font-black text-white text-lg tracking-wider bg-gray-900/40 py-1.5 px-2 rounded-lg border border-gray-800/40 inline-block w-full">-</p>
+            </div>
+
+            <button id="btn-copy" onclick="copyNumber()" class="w-full py-3 bg-gradient-to-r from-[#e7c281] to-[#d4a359] hover:from-[#d4a359] hover:to-[#aa7c34] text-gray-950 rounded-xl text-xs font-black shadow-lg shadow-[#d4a359]/5 transition-all cursor-pointer flex items-center justify-center gap-2">
+                <i class="fa-regular fa-copy"></i> Salin Nomor
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL QRIS -->
+    <div id="qris-modal" class="fixed inset-0 bg-black/70 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-[#121824] border border-gray-800 w-full max-w-xs rounded-2xl p-5 shadow-2xl scale-95 transition-transform duration-300 relative">
+            <button onclick="closeModal('qris-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-300 cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h4 class="text-center font-bold text-white mb-4 mt-2">QRIS All Payment</h4>
+            
+            <div class="bg-white p-2 border border-gray-700 rounded-xl shadow-inner mb-4 flex justify-center">
+                <img src="https://files.catbox.moe/tyr08u.jpg" alt="QRIS Danzx Official" class="w-full h-auto rounded-lg object-contain">
+            </div>
+            
+            <p class="text-center text-[10px] text-gray-400 font-medium px-1">Silakan scan QRIS premium di atas menggunakan aplikasi bank atau e-wallet pilihan Anda untuk menyelesaikan transaksi.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Splash Screen Timeout
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                const main = document.getElementById('main-content');
+                
+                splash.classList.add('opacity-0');
+                main.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    splash.remove();
+                    main.classList.remove('opacity-0');
+                }, 500);
+            }, 2500);
+        });
+
+        // 2. Modal Open/Close Core Function
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.firstElementChild.classList.remove('scale-95');
+            }, 20);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // 3. Payment Modal Logic
+        let currentNumber = "";
+        function openPayment(method, number, name) {
+            currentNumber = number;
+            document.getElementById('pay-title').innerText = `Pembayaran via ${method}`;
+            document.getElementById('pay-name').innerText = name;
+            document.getElementById('pay-number').innerText = number;
+            
+            const btnCopy = document.getElementById('btn-copy');
+            btnCopy.innerHTML = `<i class="fa-regular fa-copy"></i> Salin Nomor`;
+            btnCopy.className = "w-full py-3 bg-gradient-to-r from-[#e7c281] to-[#d4a359] hover:from-[#d4a359] hover:to-[#aa7c34] text-gray-950 rounded-xl text-xs font-black shadow-lg shadow-[#d4a359]/5 transition-all cursor-pointer flex items-center justify-center gap-2";
+
+            openModal('payment-modal');
+        }
+
+        function openQris() {
+            openModal('qris-modal');
+        }
+
+        // 4. Copy to Clipboard Function
+        function copyNumber() {
+            if (!currentNumber) return;
+            navigator.clipboard.writeText(currentNumber).then(() => {
+                const btnCopy = document.getElementById('btn-copy');
+                btnCopy.innerHTML = `<i class="fa-solid fa-check"></i> Berhasil Disalin!`;
+                btnCopy.className = "w-full py-3 bg-emerald-500 text-gray-950 rounded-xl text-xs font-black shadow-lg transition-all flex items-center justify-center gap-2";
+            }).catch(err => {
+                alert('Gagal menyalin nomor: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
